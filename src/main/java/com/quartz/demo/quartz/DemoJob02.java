@@ -19,7 +19,7 @@ public class DemoJob02 extends QuartzJobBean {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
 
-    private final AtomicInteger counts = new AtomicInteger();
+    private final AtomicInteger coun = new AtomicInteger();
 
 
     @Override
