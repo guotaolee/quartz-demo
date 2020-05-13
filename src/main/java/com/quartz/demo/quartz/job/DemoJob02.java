@@ -1,10 +1,9 @@
-package com.quartz.demo.quartz;
+package com.quartz.demo.quartz.job;
 
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -16,15 +15,12 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Time: 16:06
  * Description: No Description
  */
-public class DemoJob01 extends QuartzJobBean {
+public class DemoJob02 extends QuartzJobBean {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
 
-    private final AtomicInteger counts = new AtomicInteger();
-
-
     @Override
     protected void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-
+        logger.info("[executeInternal][我开始的执行了]");
     }
 }
